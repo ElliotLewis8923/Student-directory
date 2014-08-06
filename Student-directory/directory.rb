@@ -24,3 +24,6 @@ puts "Leopold Kwok"
 puts "James McNeil"
 puts "Jerome Pratt"
 puts "David Wickes"
+student_count = 24
+puts "Overall, we have #{student_count} great students"
+
