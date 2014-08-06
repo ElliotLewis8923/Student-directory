@@ -25,31 +25,29 @@
 # {:name => "David Wickes", :cohort => :August}
 # ]
 def print_header
-puts "The students of my cohort at Makers Academy"
-puts "------------------"
+print "The students of my cohort at Makers Academy\n------------------\n"
 end
-def print(students)
-students.each do |student|
-	puts "#{student[:name]}, (#{student[:cohort]} cohort)"
+def put(students)
+students.each_with_index do |student, index|
+	print "#{index+1}. #{student[:name]}, (#{student[:cohort]} cohort)\n"
   end
 end
 def print_footer(names)
-	puts "Overall, we have #{names.length} great students"
+	print "Overall, we have #{names.length} great students\n"
 end
 def input_students
-	puts "Please enter the names of the students"
-	puts "To finish, just hit return twice"
+	print "Please enter the names of the students\nTo finish, just hit return twice\n"
 	students = []
 	name = gets.chomp
 	while !name.empty? do
 		students << {:name => name, :cohort => :November}
-		puts "Now we have #{students.length} students"
+		print "Now we have #{students.length} students\n"
 		name = gets.chomp
 	end
 students
 end
 students = input_students
 print_header
-print(students)
+put(students)
 print_footer(students)
 
