@@ -29,7 +29,7 @@ puts "The students of my cohort at Makers Academy"
 puts "------------------"
 end
 def print(students)
-names.each do |student|
+students.each do |student|
 	puts "#{student[:name]}, (#{student[:cohort]} cohort)"
   end
 end
